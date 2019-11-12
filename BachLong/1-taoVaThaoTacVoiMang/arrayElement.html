@@ -6,67 +6,39 @@
 </head>
 <body>
 
+<input type="text" id="txtValue"></input>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"></input>
+<div id="result"></div>
 
 <script>
 
-    for (i=1;i<=9;i++){
+    let array = Array();
+    let x = 0;
 
-        for (j=1;j <=i ;j++) {
-            document.write("*");
+    function add_element_to_array() {
 
+        // array[x] = document.getElementById("txtValue").value;
+        // alert("Element: " + array[x] + " Added at index " + x);
+        // x++;
+        // document.getElementById("txtValue ").value = "";
+        array[x] = document.getElementById('txtValue').value;
+        alert( "Element: " + array[x] + " Added at index " + x );
+        x ++;
+        document.getElementById('textValue').value = " ";
+
+    }
+
+    function display_array() {
+        let e= "<hr/>";
+        for (let i = 0; i < array.length ; i++) {
+           e += array[i] + 'inside' + "<br/>";
+            document.getElementById('result').innerHTML = e;
         }
-        document.write("<br>")}
+
+    }
 
 
-
-
-    // function checkPrime(n) {
-    //
-    //     for (i = 1; i < n; i++) {
-    //         if (n % i !== 0) {
-    //             return 1;
-    //         } else return 0;
-    //     }
-    //
-    //     function showList() {
-    //         let n = 1;
-    //         let nubmer;
-    //         let count = 0;
-    //         nubmer = prompt('Nhap so nt');
-    //         while (count < nubmer) {
-    //             if (checkPrime(j) === 1) {
-    //                 document.write(j);
-    //                 count++;
-    //             }
-    //
-    //         }
-    //     }
-    // }
-    //
-    // showList();
-
-    // list();
-    // function isPrime(h) {
-    //     if (h < 2) {
-    //         return 0;
-    //     }
-    //     for (let i = 2; i < h; i++) {
-    //         if (h % i !== 0) {
-    //             return 1;
-    //         } else return 0;
-    //     }
-    // }
-    // function list() {
-    //     let j = 1;
-    //     let n, count = 0;
-    //     n = prompt('nhập số lượng số nguyên tố muốn in ra: ');
-    //     while (count <n) {
-    //         if (isPrime(j) === 1) {
-    //             document.write(j + '<br>');
-    //             count++;
-    //         }
-    //         j++;
-    //     }
     // }
 </script>
 </body>
