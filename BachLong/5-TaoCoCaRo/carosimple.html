@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<div id="carogame"></div>
+<input type="button" value="Change Value" onclick="changeValue()">
+<script>
+    let b=document.getElementById('carogame');
+    let x=[];
+    let result="";
+
+    for (let i = 0; i <5 ; i++) {
+        x[i]=[];
+        for (let j = 0; j <5 ; j++) {
+            x[i][j]=0;
+            result += x[i][j] + "&nbsp;&nbsp;";
+        }
+        result +='<br>'
+    }
+    b.innerHTML=result;
+
+
+    function changeValue() {
+        let changex= parseInt(prompt('nhap x :' ));
+        let changey= parseInt(prompt('nhap y :' ));
+        result=" ";
+
+        for (let i = 0; i <5 ; i++) {
+            x[i]=[];
+            for (let j = 0; j <5 ; j++) {
+                x[i][j]=0;
+                x[changex][changey] ="X";
+                result += x[i][j] + "&nbsp;&nbsp;";
+
+
+            }
+            result +='<br>'
+        }
+        b.innerHTML=result
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let b = document.getElementById('carogame');
+    // let board =[];
+    // let data = "";
+    // for (let i = 0; i <5 ; i++) {
+    //     board[i]=[];
+    //     for (let j = 0; j <5 ; j++) {
+    //         board[i][j]=0;
+    //         data += board[i][j] + "&nbsp;&nbsp;"
+    //     }
+    //      data+='<br>'
+    // }
+    // b.innerHTML=data;
+    //
+    // // let b = document.getElementById("carogame");
+    // // let board = []; // Đây là gọi mảng
+    // // let data = "";
+    // // for (let i = 0; i < 5; i++) {
+    // //     board[i] = [];
+    // //     for (let j = 0; j < 5; j++) {
+    // //         board[i][j] = 0;
+    // //         data += board [i][j] + "&nbsp;&nbsp;";
+    // //     }
+    // //     data += "<br/>";
+    // // }
+    // // // data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+    // // b.innerHTML = data;
+    // function changeValue() {
+    //     let positionX = parseInt(prompt("x: "));
+    //     let positionY = parseInt(prompt("Y: "));
+    //     data = "";
+    //
+    //     //Vẽ lại bàn cờ
+    //     for (let i = 0; i < 5; i++) {
+    //         data += "<br/>";
+    //         for (let j = 0; j < 5; j++) {
+    //             board[i][j]=0;
+    //             board [positionX][positionY] = "X";
+    //             data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp";
+    //
+    //         }
+    //     }
+    //     // data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    //     b.innerHTML = "<hr/>" + data;
+    // }
+</script>
+</body>
+</html>
