@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="inputnumber"><br>
+<button type="button" onclick="inputvalue()">Input</button>
+<button type="button" onclick="showvalue()">Show</button>
+<p id="result"></p>
+</body>
+
+<script>
+    let array = Array();
+    let x = 0;
+
+function inputvalue() {
+    array[x] = document.getElementById('inputnumber').value;
+
+    alert(array[x]+ ' vừa được nhập vào phần tử ' + x);
+    x ++;
+}
+
+function showvalue() {
+    let e = '<hr>';
+    for (let i = 0; i < array.length ; i++) {
+       e+= array[i] + '<br>';
+        document.getElementById('result').innerHTML = 'Phan tu duoc gan vao' + e
+    }
+
+
+}
+
+</script>
+
+</html>
